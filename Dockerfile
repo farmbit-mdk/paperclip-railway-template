@@ -52,5 +52,4 @@ RUN mkdir -p /paperclip \
 # Entrypoint runs as root, fixes /paperclip volume permissions, then execs as node.
 EXPOSE 3100
 ENTRYPOINT ["/wrapper/entrypoint.sh"]
-USER node
 CMD ["node", "/wrapper/src/server.js"]
